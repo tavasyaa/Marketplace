@@ -5,7 +5,6 @@ class Products extends React.Component {
 		data: []
 	};
 
-
 	componentDidMount() {
 		this.callBackend()
 			.then(res => this.setState({ data: res.express }))
