@@ -1,37 +1,48 @@
 import React from 'react';
+import airmax from '../images/airmax.png';
+
 
 class Products extends React.Component {
 	state = {
 		data: []
 	};
 
-	componentDidMount() {
-		this.callBackend()
-			.then(res => this.setState({ data: res.express }))
-			.catch(err => console.log(err))
+	constructor() {
+		super();
+		this.callBackend();
 	}
 
-	callBackend = async () => {
-		const response = await fetch('/express_backend');
-		const body = await response.json();
-
-		if (response.status !== 200) {
-			throw Error(body.message) 
-		}
-		return body;
-};
+	callBackend = () => {
+		fetch('/express_backend')
+			.then(res => res.json())
+			.then(res => this.setState({data: res.express}))
+	}
 
 	render() {
-		return(
-			<div className="jumbotron" style={{margin: 0}}>
-				<div className="col-sm-3">
-					<h2>Search</h2>
+		if (this.state.data.length){
+			return(
+				<div>
+					<div class="container">
+						<div class="row">
+							<div class="col-3">col-3</div>
+							<div class="col-9">
+								<div class="card" style={{maxWidth: 250}}>
+								  <img class="card-img-top" src={airmax} alt="Card image cap" />
+								  <div class="card-body">
+								    <p class="card-text">{this.state.data[0].title}</p>
+								  </div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div className="col-sm-9">
-					{console.log(this.state.data[0])}
-				</div>
-			</div>
-		)
+			)
+		}
+		else {
+			return(
+				<div></div>
+			)
+		}
 	}
 }
 
