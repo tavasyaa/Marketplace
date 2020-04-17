@@ -22,25 +22,15 @@ class Products extends React.Component {
 		if (this.state.data.length){
 			return(
 				<div>
-					<div class="container">
-						<div class="row">
-							<div class="col-3">col-3</div>
-							<div class="col-9">
-								<div class="card" style={{maxWidth: 250}}>
-								  <img class="card-img-top" src={airmax} alt="Card image cap" />
-								  <div class="card-body">
-								    <p class="card-text">{this.state.data[0].title}</p>
-								  </div>
-								</div>
-							</div>
-						</div>
-					</div>
+					<p>{this.state.data[0].title}</p>
 				</div>
 			)
 		}
 		else {
 			return(
-				<div></div>
+				<div>
+					<p>Loading...</p>
+				</div>
 			)
 		}
 	}
