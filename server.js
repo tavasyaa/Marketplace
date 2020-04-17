@@ -6,7 +6,7 @@ const mysql = require('mysql');
 const connection = mysql.createConnection({
 	host: 'localhost',
 	user: 'root',
-	password: 'root',
+	password: 'novakdjokovic1',
 	database: 'marketplace'
 });
 
@@ -16,7 +16,7 @@ connection.connect(function(err){
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
- app.get('/express_backend', (req, res) => {
+app.get('/express_backend', (req, res) => {
 	connection.query('select * from items', function(err, data){
 		err ? res.send(err) : res.send({express: data})
 	})

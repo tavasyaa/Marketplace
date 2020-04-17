@@ -2,7 +2,7 @@ import React from 'react';
 import airmax from '../images/airmax.png';
 import blackkicks from '../images/blackkicks.png'
 import downarrow from '../images/downarrow.png'
-import { Link } from 'react-router-dom';
+fimport { Link } from 'react-router-dom';
 import { Link as Animationlink } from "react-scroll";
 
 /* make the jquery scrolling button */
@@ -20,7 +20,7 @@ class Homepage extends React.Component {
 					</p><br />	
 					<p className="lead">
 						<Animationlink to="scrolltarget" smooth={true}  duration= {500}>
-						<img className="downarrow" src={downarrow} alt="Down arrow"/>
+							<img className="downarrow" src={downarrow} alt="Down arrow"/>
 						</Animationlink>
 					</p>	
 				</div>
