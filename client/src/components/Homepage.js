@@ -1,8 +1,10 @@
 import React from 'react';
 import airmax from '../images/airmax.png';
 import blackkicks from '../images/blackkicks.png'
-import $ from 'jquery';
+import downarrow from '../images/downarrow.png'
 import { Link } from 'react-router-dom';
+import { Link as Animationlink } from "react-scroll";
+
 /* make the jquery scrolling button */
 
 class Homepage extends React.Component {
@@ -15,9 +17,14 @@ class Homepage extends React.Component {
 					<hr className="my-4" />
 					<p className="lead">
 						<Link className="btn btn-primary btn-lg homepagebutton" to={'/products'}>Products</Link>
-					</p>
+					</p><br />	
+					<p className="lead">
+						<Animationlink to="scrolltarget" smooth={true}  duration= {500}>
+						<img className="downarrow" src={downarrow} alt="Down arrow"/>
+						</Animationlink>
+					</p>	
 				</div>
-				<div className="flex-container">
+				<div className="flex-container"  name="scrolltarget">
 					<div className="container">
 						<img className="homepageimage" src={airmax} alt="Nike Airmax (red)"/>
 					</div>

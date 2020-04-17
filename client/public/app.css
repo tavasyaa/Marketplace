@@ -40,6 +40,10 @@ html {
 	max-width: 50vw;
 }
 
+.downarrow {
+	height: 30px;
+}
+
 /* Footer.js */
 
 .footertext {
