@@ -2,7 +2,7 @@ import React from 'react';
 import airmax from '../images/airmax.png';
 import blackkicks from '../images/blackkicks.png'
 import downarrow from '../images/downarrow.png'
-fimport { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Link as Animationlink } from "react-scroll";
 
 /* make the jquery scrolling button */

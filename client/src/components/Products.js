@@ -20,9 +20,27 @@ class Products extends React.Component {
 
 	render() {
 		if (this.state.data.length){
+
+			const itemcards = []
+
+			for (var i = 0; i < this.state.data.length; i++) {
+				itemcards.push(
+					<div class="card productitem">
+					  <img class="card-img-top" src={airmax} alt="Item" />
+					  <div class="card-body">
+					    <h5 class="card-title">{this.state.data[i].title}</h5>
+					    <p class="card-text">${this.state.data[i].price}</p>
+					    <a href="#" class="btn btn-primary">See more</a>
+					  </div>
+					</div>
+				)
+			}
+
 			return(
 				<div>
-					<p>{this.state.data[0].title}</p>
+					<div class="container">
+						{itemcards}
+					</div>
 				</div>
 			)
 		}
