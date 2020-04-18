@@ -9,4 +9,5 @@ Reqs, design, and development is all by me, and will change over the next few we
 To do: 
 - Make jQuery button fix to the bottom of jumbotron on the homepage
 - Images from AWS
+- Fix Navbar, hamburger doesn't work
 - The rest of the website! :)
